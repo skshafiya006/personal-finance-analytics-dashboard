@@ -45,23 +45,23 @@ function Analytics({ expenses }) {
   ];
 
   const COLORS = [
-    "#0088FE",
-    "#00C49F",
-    "#FFBB28",
-    "#FF8042",
-    "#8884D8",
-  ];
+  "#116466",
+  "#1D8A8D",
+  "#D9B08C",
+  "#FFCB9A",
+  "#D1E8E2",
+];
 
   return (
     <div className="section">
       <h2>Category Analytics</h2>
 
-      <PieChart width={500} height={350}>
+      <PieChart width={600} height={320}>
         <Pie
           data={data}
           cx="50%"
           cy="50%"
-          outerRadius={120}
+          outerRadius={100}
           dataKey="value"
           label
         >

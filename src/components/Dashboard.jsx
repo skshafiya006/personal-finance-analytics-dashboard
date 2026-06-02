@@ -27,7 +27,7 @@ function Dashboard({ expenses }) {
         <div className="card-content">
           <h3>Monthly Budget</h3>
           <p>₹{budget}</p>
-          <span>Total Budget</span>
+          
         </div>
       </div>
 
@@ -39,12 +39,7 @@ function Dashboard({ expenses }) {
         <div className="card-content">
           <h3>Total Spent</h3>
           <p>₹{totalSpent}</p>
-          <span>
-            {Math.round(
-              (totalSpent / budget) * 100
-            ) || 0}
-            % of budget
-          </span>
+          
         </div>
       </div>
 
@@ -56,9 +51,7 @@ function Dashboard({ expenses }) {
         <div className="card-content">
           <h3>Remaining Budget</h3>
           <p>₹{remainingBudget}</p>
-          <span>
-            {healthScore}% left
-          </span>
+          
         </div>
       </div>
 

@@ -220,33 +220,76 @@ select:focus {
 }
 
 button {
-  background: linear-gradient(
-    135deg,
-    #3B82F6,
-    #8AB6B1
-  );
+ background: linear-gradient(
+  135deg,
+  #116466,
+  #D9B08C
+);
 
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
+box-shadow:
+  0 0 20px rgba(17,100,102,0.2);
 }
 
 button:hover {
   opacity: 0.9;
 }
+button:hover {
+  transform: translateY(-2px);
+}
 
 .expense-item {
-  background: #122231;
-  padding: 14px;
-  border-radius: 12px;
-  margin-bottom: 10px;
+  background: #102528;
+
+  border-radius: 18px;
+
+  padding: 18px 22px;
+
+  margin-bottom: 14px;
 
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
+  transition: all 0.25s ease;
+}
+
+.expense-item:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(17,100,102,0.25);
+}
+
+.expense-item h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 1.1rem;
+}
+
+.expense-item p {
+  margin: 6px 0 0;
+
+  color: var(--text-secondary);
+}
+
+.expense-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.expense-right span {
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  color: var(--accent-light);
 }
 
 .expense-item button {
@@ -279,4 +322,50 @@ button:hover {
   .app {
     padding: 20px;
   }
+}
+
+.hero {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3.8rem;
+  font-weight: 800;
+
+  margin: 0;
+
+  color: white;
+
+  letter-spacing: -3px;
+}
+
+.subtitle {
+  margin-top: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 1.15rem;
+}
+
+.delete-btn {
+  background: transparent;
+
+  border: 1px solid #ef4444;
+
+  color: #ef4444;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: rgba(239,68,68,0.12);
 }

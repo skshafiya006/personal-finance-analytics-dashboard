@@ -23,9 +23,15 @@ function App() {
   }, [expenses]);
   return (
     <div className="app">
+      <div className="hero">
       <h1 className="title">
-        Personal Finance Analytics Dashboard
+        FinTrack
       </h1>
+
+      <p className="subtitle">
+        Smart Personal Finance Dashboard
+      </p>
+    </div>
 
       <Dashboard expenses={expenses} />
 
