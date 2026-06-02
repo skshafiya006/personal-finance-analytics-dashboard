@@ -44,7 +44,7 @@ const topCategoryPercentage =
   );
 
   return (
-    <div>
+    <div className="section">
       <h2>Smart Insights</h2>
 
         <p>

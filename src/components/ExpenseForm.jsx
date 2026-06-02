@@ -28,7 +28,7 @@ function ExpenseForm({ expenses, setExpenses }) {
   };
 
   return (
-    <div>
+    <div className="section">
       <h2>Add Expense</h2>
 
       <form onSubmit={handleSubmit}>

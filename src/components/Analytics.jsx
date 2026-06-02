@@ -53,7 +53,7 @@ function Analytics({ expenses }) {
   ];
 
   return (
-    <div>
+    <div className="section">
       <h2>Category Analytics</h2>
 
       <PieChart width={500} height={350}>

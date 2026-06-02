@@ -14,7 +14,7 @@ function Dashboard({ expenses }) {
   );
 
   return (
-    <>
+    <div className="section">
       <h2>Dashboard</h2>
 
       <div className="dashboard">
@@ -38,7 +38,7 @@ function Dashboard({ expenses }) {
           <p>{healthScore}/100</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

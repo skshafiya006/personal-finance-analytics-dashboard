@@ -12,7 +12,7 @@ function ExpenseList({
   };
 
   return (
-    <div>
+    <div className="section">
       <h2>Expenses</h2>
 
       {expenses.length === 0 ? (
