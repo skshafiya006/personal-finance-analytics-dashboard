@@ -3,6 +3,7 @@ import "./App.css";
 import Dashboard from "./components/Dashboard";
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
+import Analytics from "./components/Analytics";
 
 function App() {
   const [expenses, setExpenses] = useState(() => {
@@ -35,6 +36,7 @@ function App() {
   expenses={expenses}
   setExpenses={setExpenses}
 />
+    <Analytics expenses={expenses} />
     </div>
   );
 }
