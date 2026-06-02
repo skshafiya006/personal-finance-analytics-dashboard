@@ -4,6 +4,7 @@ import Dashboard from "./components/Dashboard";
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
 import Analytics from "./components/Analytics";
+import Insights from "./components/Insights";
 
 function App() {
   const [expenses, setExpenses] = useState(() => {
@@ -37,6 +38,7 @@ function App() {
   setExpenses={setExpenses}
 />
     <Analytics expenses={expenses} />
+    <Insights expenses={expenses} />
     </div>
   );
 }
