@@ -13,7 +13,7 @@ function App() {
         Personal Finance Analytics Dashboard
       </h1>
 
-      <Dashboard />
+      <Dashboard expenses={expenses} />
 
       <ExpenseForm
         expenses={expenses}
