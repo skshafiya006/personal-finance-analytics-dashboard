@@ -31,7 +31,10 @@ function App() {
         expenses={expenses}
         setExpenses={setExpenses}
       />
-      <ExpenseList expenses={expenses} />
+      <ExpenseList
+  expenses={expenses}
+  setExpenses={setExpenses}
+/>
     </div>
   );
 }

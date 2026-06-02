@@ -1,4 +1,16 @@
-function ExpenseList({ expenses }) {
+function ExpenseList({
+  expenses,
+  setExpenses,
+}) {
+  const deleteExpense = (id) => {
+    const updatedExpenses =
+      expenses.filter(
+        (expense) => expense.id !== id
+      );
+
+    setExpenses(updatedExpenses);
+  };
+
   return (
     <div>
       <h2>Expenses</h2>
@@ -9,9 +21,19 @@ function ExpenseList({ expenses }) {
         expenses.map((expense) => (
           <div key={expense.id}>
             <p>
-              ₹{expense.amount} | {expense.category} |
-              {" "}
+              ₹{expense.amount}
+              {" | "}
+              {expense.category}
+              {" | "}
               {expense.description}
+
+              <button
+                onClick={() =>
+                  deleteExpense(expense.id)
+                }
+              >
+                Delete
+              </button>
             </p>
           </div>
         ))
