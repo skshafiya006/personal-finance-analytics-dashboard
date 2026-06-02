@@ -14,32 +14,78 @@ function Dashboard({ expenses }) {
   );
 
   return (
-    <div className="section">
-      <h2>Dashboard</h2>
+  <div className="section">
+    <h2>Dashboard</h2>
 
-      <div className="dashboard">
-        <div className="card">
-          <h3>Total Budget</h3>
+    <div className="dashboard">
+
+      <div className="card">
+        <div className="card-icon budget-icon">
+          💰
+        </div>
+
+        <div className="card-content">
+          <h3>Monthly Budget</h3>
           <p>₹{budget}</p>
-        </div>
-
-        <div className="card">
-          <h3>Total Spent</h3>
-          <p>₹{totalSpent}</p>
-        </div>
-
-        <div className="card">
-          <h3>Remaining Budget</h3>
-          <p>₹{remainingBudget}</p>
-        </div>
-
-        <div className="card">
-          <h3>Financial Health</h3>
-          <p>{healthScore}/100</p>
+          <span>Total Budget</span>
         </div>
       </div>
+
+      <div className="card">
+        <div className="card-icon spent-icon">
+          📈
+        </div>
+
+        <div className="card-content">
+          <h3>Total Spent</h3>
+          <p>₹{totalSpent}</p>
+          <span>
+            {Math.round(
+              (totalSpent / budget) * 100
+            ) || 0}
+            % of budget
+          </span>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-icon remain-icon">
+          💳
+        </div>
+
+        <div className="card-content">
+          <h3>Remaining Budget</h3>
+          <p>₹{remainingBudget}</p>
+          <span>
+            {healthScore}% left
+          </span>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-icon health-icon">
+          ❤️
+        </div>
+
+        <div className="card-content">
+          <h3>Financial Health</h3>
+          <p>
+            {healthScore > 70
+              ? "Good"
+              : healthScore > 40
+              ? "Okay"
+              : "Low"}
+          </p>
+
+          <span>
+            {healthScore}/100 Score
+          </span>
+        </div>
+      </div>
+
     </div>
-  );
+  </div>
+);
 }
 
 export default Dashboard;
