@@ -43,38 +43,87 @@ const topCategoryPercentage =
     (totalSpent / budget) * 100
   );
 
-  return (
-    <div className="section">
-      <h2>Smart Insights</h2>
-
-        <p>
-        Your largest spending category is{" "}
-        <strong>{topCategory}</strong>.
-        </p>
-
-        <p>
-        {topCategory} accounts for{" "}
-        {topCategoryPercentage}% of your
-        spending.
-        </p>
-
-      <p>
-        You have used {budgetUsed}% of your
-        monthly budget.
-      </p>
-      <p>
-        Remaining Budget: ₹
-        {budget - totalSpent}
-        </p>
-
-      {budgetUsed > 80 && (
-        <p>
-          Warning: You have crossed 80% of your
-          budget.
-        </p>
-      )}
-    </div>
+   const healthScore = Math.max(
+    0,
+    Math.round(((budget-totalSpent) / budget) * 100)
   );
+
+return (
+  <div className="section">
+    <h2>Smart Insights</h2>
+
+    <div className="insights-grid">
+
+      <div className="insight-card">
+        <div className="insight-icon">
+          🚀
+        </div>
+
+        <h3>Top Category</h3>
+
+        <p className="highlight">
+          {topCategory}
+        </p>
+
+        <span>
+          {topCategoryPercentage}% of spending
+        </span>
+      </div>
+
+      <div className="insight-card">
+        <div className="insight-icon">
+          📈
+        </div>
+
+        <h3>Budget Usage</h3>
+
+        <p className="highlight">
+          {budgetUsed}%
+        </p>
+
+        <span>
+          Monthly Budget Used
+        </span>
+      </div>
+
+      <div className="insight-card">
+        <div className="insight-icon">
+          💰
+        </div>
+
+        <h3>Remaining Budget</h3>
+
+        <p className="highlight">
+          ₹{budget - totalSpent}
+        </p>
+
+        <span>
+          Budget Left
+        </span>
+      </div>
+
+      <div className="insight-card">
+        <div className="insight-icon">
+          ❤️
+        </div>
+
+        <h3>Financial Health</h3>
+
+        <p className="highlight">
+          {healthScore > 80
+            ? "Excellent"
+            : healthScore > 40
+            ? "Good"
+            : "Low"}
+        </p>
+
+        
+      </div>
+
+    </div>
+
+  </div>
+);
 }
 
 export default Insights;

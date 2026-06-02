@@ -63,10 +63,10 @@ function Dashboard({ expenses }) {
         <div className="card-content">
           <h3>Financial Health</h3>
           <p>
-            {healthScore > 70
-              ? "Good"
+            {healthScore > 80
+              ? "Excellent"
               : healthScore > 40
-              ? "Okay"
+              ? "Good"
               : "Low"}
           </p>
 

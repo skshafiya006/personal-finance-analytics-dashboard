@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 :root {
   --bg-primary: #071A1C;
   --bg-card: #0E2325;
@@ -23,7 +22,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 
   background:
     radial-gradient(
@@ -77,8 +76,17 @@ body {
 }
 
 .section h2 {
-  margin-top: 0;
+  text-align: center;
+
+  margin-bottom: 28px;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
   color: white;
+
+  letter-spacing: -1px;
 }
 
 .dashboard {
@@ -100,6 +108,8 @@ body {
   gap: 18px;
 
   transition: all 0.25s ease;
+
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .card-icon {
@@ -173,15 +183,11 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-6px);
 
   box-shadow:
-    0 0 25px rgba(17,100,102,0.35);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(59,130,246,0.25);
+    0 0 30px rgba(17,100,102,0.35);
 }
 
 .card h3 {
@@ -212,17 +218,21 @@ select {
   padding: 12px;
   border-radius: 12px;
   outline: none;
+  transition: all 0.25s ease;
 }
 
 input:focus,
 select:focus {
-  border-color: var(--accent-blue);
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 15px rgba(217,176,140,0.2);
 }
 
 button {
  background: linear-gradient(
   135deg,
-  #116466,
+  #0e5a5b,
   #D9B08C
 );
 
@@ -253,6 +263,8 @@ button:hover {
   align-items: center;
 
   transition: all 0.25s ease;
+
+  border: 1px solid rgba(255,255,255,0.04);
 }
 
 .expense-item:hover {
@@ -326,15 +338,18 @@ button:hover {
 
 .hero {
   text-align: center;
+  margin-bottom: 70px;
+}
 
-  margin-bottom: 60px;
+.subtitle {
+  margin-top: 20px;
 }
 
 .title {
   font-size: 3.8rem;
   font-weight: 800;
 
-  margin: 0;
+  margin: 0 0 16px 0;
 
   color: white;
 
@@ -342,19 +357,19 @@ button:hover {
 }
 
 .subtitle {
-  margin-top: 12px;
-
   color: var(--text-secondary);
 
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+
+  letter-spacing: 1px;
+
+  margin: 0;
 }
 
 .delete-btn {
   background: transparent;
-
   border: 1px solid #ef4444;
-
-  color: #ef4444;
+  color: #f0dd5f;
 
   width: 42px;
   height: 42px;
@@ -364,8 +379,136 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-size: 1.1rem;
 }
 
 .delete-btn:hover {
   background: rgba(239,68,68,0.12);
+}
+
+.analytics-container {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 50px;
+
+  flex-wrap: wrap;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.analytics-summary {
+  min-width: 260px;
+}
+
+.summary-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 18px;
+
+  padding-bottom: 10px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.summary-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+}
+
+.insights-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.insight-card {
+  background: #102528;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  transition: all 0.25s ease;
+
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.insight-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 20px rgba(17,100,102,0.25);
+}
+
+.insight-icon {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+
+  margin-bottom: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #116466,
+      #D9B08C
+    );
+}
+
+.insight-card h3 {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 1rem;
+}
+
+.highlight {
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  color: white;
+
+  margin: 10px 0;
+}
+
+.insight-card span {
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
 }

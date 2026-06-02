@@ -18,7 +18,17 @@ function ExpenseList({
       <h2>Expenses</h2>
 
       {expenses.length === 0 ? (
-        <p>No expenses added yet.</p>
+        <div
+        style={{
+            textAlign: "center",
+            padding: "30px",
+            color: "#9FB8B2",
+        }}
+        >
+        No expenses added yet.
+        <br />
+        Start tracking your finances 🚀
+        </div>
       ) : (
         expenses.map((expense) => (
   <div
@@ -40,12 +50,11 @@ function ExpenseList({
         ₹{expense.amount}
       </span>
 
-            <button
-        onClick={() =>
-            deleteExpense(expense.id)
-        }
+        <button
+        className="delete-btn"
+        onClick={() => deleteExpense(expense.id)}
         >
-        Delete
+        <Trash2 size={20} />
         </button>
     </div>
   </div>
